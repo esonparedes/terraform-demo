@@ -79,6 +79,7 @@ No modules.
 |------|------|
 | [aws_instance.web](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance) | resource |
 | [aws_internet_gateway.myigw](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/internet_gateway) | resource |
+| [aws_key_pair.web-new-key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair) | resource |
 | [aws_lb.lb](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb) | resource |
 | [aws_lb_listener.listener](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_listener) | resource |
 | [aws_lb_target_group.target_group](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lb_target_group) | resource |
@@ -95,6 +96,7 @@ No modules.
 | [aws_subnet.private-1b](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/subnet) | resource |
 | [aws_vpc.myvpc](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc) | resource |
 | [aws_ami.ubuntu](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami) | data source |
+| [aws_key_pair.pre-existing-key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/key_pair) | data source |
 
 ## Inputs
 
@@ -102,6 +104,8 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_region"></a> [aws\_region](#input\_aws\_region) | AWS Input Variable: Target AWS Region | `string` | `"us-east-1"` | no |
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | AWS Input Variable: EC2 Instance Type | `string` | `"t3.micro"` | no |
+| <a name="input_keypair_name"></a> [keypair\_name](#input\_keypair\_name) | If you have your keypair already set on AWS, specify it here. | `string` | `null` | no |
+| <a name="input_public_key_local_path"></a> [public\_key\_local\_path](#input\_public\_key\_local\_path) | Location of your public key. | `string` | `"~/.ssh/id_rsa.pub"` | no |
 
 ## Outputs
 
