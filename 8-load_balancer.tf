@@ -18,7 +18,7 @@ resource "aws_lb" "lb" {
 resource "aws_lb_listener" "listener" {
   load_balancer_arn = aws_lb.lb.arn
   port              = "80"
-  protocol          = "HTTP"
+  protocol          = "HTTP" # For the sake of this demo, we will use unsecured protocol.
   certificate_arn   = null
 
   default_action {

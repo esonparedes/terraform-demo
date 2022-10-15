@@ -57,6 +57,13 @@ Setup/Configure your AWS CLI Keys
     Default output format [None]: json
     ```
 
+### Optional - TFSec (Terraform Vulnerability Scanning Tool)
+Reference: https://tfsec.dev/
+<br/>
+`tfsec` is a static analysis security scanner for your Terraform code.
+<br/>
+Designed to run locally and in your CI pipelines, developer-friendly output and fully documented checks mean detection and remediation can take place as quickly and efficiently as possible.
+
 ## Requirements
 
 | Name | Version |
