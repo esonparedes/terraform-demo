@@ -15,6 +15,16 @@ resource "aws_instance" "web" {
   associate_public_ip_address = true
   key_name                    = local.keypair_name
 
+  root_block_device {
+    encrypted             = true
+    kms_key_id            = data.aws_kms_alias.aws-ebs.arn
+    delete_on_termination = true
+  }
+
+  metadata_options {
+    http_tokens = "required"
+  }
+
   tags = {
     Name = "${local.common_name}-web-instance-${count.index + 1}"
   }

@@ -7,6 +7,7 @@ resource "aws_lb" "lb" {
   security_groups            = [aws_security_group.lb.id]
   idle_timeout               = 3600
   enable_deletion_protection = false
+  drop_invalid_header_fields = true
 
   tags = {
     Name = "${local.common_name}-lb"

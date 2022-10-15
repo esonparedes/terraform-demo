@@ -14,3 +14,7 @@ data "aws_ami" "ubuntu" {
 
   owners = ["099720109477"] # Canonical
 }
+
+data "aws_kms_alias" "aws-ebs" {
+  name = "alias/aws/ebs"
+}
