@@ -15,6 +15,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-data "aws_kms_alias" "aws-ebs" {
-  name = "alias/aws/ebs"
+data "aws_kms_key" "aws-ebs" {
+  key_id = "alias/aws/ebs"
 }

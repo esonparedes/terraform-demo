@@ -1,7 +1,7 @@
 # Create the load balancer
 resource "aws_lb" "lb" {
   name                       = "${local.common_name}-lb"
-  internal                   = true
+  internal                   = false
   load_balancer_type         = "application"
   subnets                    = local.subnet_ids
   security_groups            = [aws_security_group.lb.id]

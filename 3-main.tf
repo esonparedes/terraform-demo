@@ -17,13 +17,13 @@ resource "aws_instance" "web" {
 
   root_block_device {
     encrypted             = true
-    kms_key_id            = data.aws_kms_alias.aws-ebs.arn
+    kms_key_id            = data.aws_kms_key.aws-ebs.arn
     delete_on_termination = true
   }
 
-  metadata_options {
-    http_tokens = "required"
-  }
+  # metadata_options {
+  #   http_tokens = "required"
+  # }
 
   tags = {
     Name = "${local.common_name}-web-instance-${count.index + 1}"
